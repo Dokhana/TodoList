@@ -1,14 +1,17 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import {StrictMode} from "react";
+import {createRoot} from "react-dom/client";
 import "./index.css";
-import "./TodoList"
 import TodoList from "./TodoList";
 
-var destination = document.querySelector("#container");
+const rootElement = document.getElementById('container');
+const root = createRoot(rootElement);
 
-ReactDOM.render(
-    <div>
-        <TodoList/>
-    </div>,
-    destination
+root.render(
+    
+  <StrictMode>
+
+    <TodoList/>
+    
+  </StrictMode>,
+
 );
